@@ -1,0 +1,142 @@
+/* style.css */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.home-screen {
+    flex-direction: row;
+}
+
+.split {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    height: 100vh;
+}
+
+.left {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+}
+
+.right {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+
+.split:hover {
+    filter: brightness(1.1);
+}
+
+.game-title {
+    font-size: 2.5rem;
+    color: #333;
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cps-screen {
+    background: linear-gradient(to right, #232526, #414345);
+    color: white;
+    flex-direction: column;
+}
+
+.reaction-screen {
+    background: linear-gradient(to right, #000428, #004e92);
+    color: white;
+    flex-direction: column;
+}
+
+.game-container {
+    text-align: center;
+    max-width: 800px;
+    width: 90%;
+    padding: 30px;
+}
+
+.instructions {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+select, button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.click-box {
+    width: 60%;
+    max-width: 600px;
+    height: 250px;
+    margin: 20px auto;
+    background-color: #000;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    user-select: none;
+}
+
+.click-box:hover {
+    transform: scale(1.02);
+}
+
+.reaction-box {
+    width: 60%;
+    max-width: 600px;
+    height: 250px;
+    margin: 20px auto;
+    background-color: red;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reaction-box:hover {
+    transform: scale(1.02);
+}
+
+.result-box {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #eee;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .click-box, .reaction-box {
+        width: 90%;
+        font-size: 20px;
+        height: 200px;
+    }
+}

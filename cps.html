@@ -1,0 +1,29 @@
+<!-- cps.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CPS Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="cps-screen">
+    <div class="game-container">
+        <label for="time-select">Choose Time:</label>
+        <select id="time-select">
+            <option value="1">1 second</option>
+            <option value="3">3 seconds</option>
+            <option value="5" selected>5 seconds</option>
+            <option value="10">10 seconds</option>
+        </select>
+
+        <p class="instructions">Click the box below to start the test</p>
+        <p id="cps-timer">Time Left: --</p>
+
+        <div id="click-box" class="click-box"></div>
+
+        <p id="cps-result" class="result-box"></p>
+        <a href="index.html" class="back-btn">← Back to Menu</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
